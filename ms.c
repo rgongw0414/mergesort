@@ -38,6 +38,7 @@ int main(int argc, char* argv[]){
 	//int arr[] = {83, 86, 77, 15, 93}; 
 	//len = sizeof(arr)/sizeof(arr[0]);
 	srand(time(0));
+    fputs("initial: \n", stdout);
 	for (int i = 0; i < len; i++){
 		arr[i] = rand() % 100;
 		printf("%d ", arr[i]);
@@ -45,6 +46,7 @@ int main(int argc, char* argv[]){
 	putchar('\n');
 	int* reg = malloc(sizeof(int)*len);
 	mergesort(arr, reg, 0, len-1);	
+    fputs("\nmergesort: \n", stdout);
 	for (int i = 0; i < len; i++){
 		printf("%d ", arr[i]);
 	}
